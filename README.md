@@ -11,5 +11,6 @@ Further information can be found [here](https://reactiongaming.us/community/reso
 - [GameBanana](https://gamebanana.com/skins/games/3291)
 - [IW4x Steam Community](https://steamcommunity.com/groups/IW4X/discussions/0/)
 - [ReactionGaming](https://reactiongaming.us/community/resources/categories/mw2-mods.3/)
+- [Pre-configured Serverfiles](https://steamcommunity.com/linkfilter/?url=https://cdn.discordapp.com/attachments/219514629703860235/309010603484381186/IW4x_prebuilddediconfig.zip)
 - ...
 
