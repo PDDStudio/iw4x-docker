@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  server:
+    build:
+      context: "./image/"
+      args:
+        # You can change these matching the ids of your current user, except if you are root.
+        - USER_ID=1000
+        - GROUP_ID=1000
+    image: "iw4x:latest"
+    # Will auto-restart your server if it crashes.
+    restart: always
+    environment:
+      # Do not forget to adjust the ports section down below if chaning the port.
+      IW4X_PORT: 28960
+      # Here you can change the commandline arguments of your server.
+      IW4X_ARGS: "-dedicated +set net_port ${IW4X_PORT} +exec server.cfg +party_enable 0 +sv_maxclients 12 +map_rotate"
+    volumes:
+      # Copy the whole dedicated server into iw4x-dedicated/data/ and make sure the files are owned by the values of ${USER_ID} and ${GROUP_ID}
+      - "./data/:/iw4x/server/"
+    ports:
+      - "28960:28960/udp"
+      - "28960:28960"
