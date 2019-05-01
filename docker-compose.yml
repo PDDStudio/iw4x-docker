@@ -18,7 +18,7 @@ services:
     restart: always
     volumes:
       - type: bind
-        source: ../data
+        source: ./data
         target: /iw4x/server
     networks:
       - netstack
