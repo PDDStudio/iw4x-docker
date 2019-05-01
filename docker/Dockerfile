@@ -24,14 +24,19 @@ WORKDIR /iw4x
 RUN mkdir -p server
 
 COPY ./init.sh /iw4x/init.sh
-COPY ./config/server.cfg /iw4x/server/server.cfg
-
-# For testing purposes only
-COPY ./config/server.cfg /iw4x/server/userraw/server.cfg
+COPY ./config/server.cfg /iw4x/server/players/server.cfg
 
 VOLUME ["/iw4x/server"]
 
 EXPOSE ${IW4X_PORT}/udp
 EXPOSE ${IW4X_PORT}
+
+RUN ls -la /iw4x &&\
+  echo "======" &&\
+  ls -la /iw4x/server &&\
+  echo "======" &&\
+  ls -la /iw4x/server/userraw &&\
+  echo "======" &&\
+  ls -la /iw4x/server/players
 
 CMD ["/bin/sh", "/iw4x/init.sh"]
