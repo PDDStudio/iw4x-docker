@@ -14,3 +14,13 @@ Further information can be found [here](https://reactiongaming.us/community/reso
 - [Pre-configured Serverfiles](https://steamcommunity.com/linkfilter/?url=https://cdn.discordapp.com/attachments/219514629703860235/309010603484381186/IW4x_prebuilddediconfig.zip)
 - ...
 
+## Building
+
+The following commands are used to build the `iw4x-docker` image:
+
+```sh
+# build the docker image
+docker-compose build --compress --force-rm --no-cache --pull
+# fire up an instance
+docker-compose up -d
+```
