@@ -31,12 +31,4 @@ VOLUME ["/iw4x/server"]
 EXPOSE ${IW4X_PORT}/udp
 EXPOSE ${IW4X_PORT}
 
-RUN ls -la /iw4x &&\
-  echo "======" &&\
-  ls -la /iw4x/server &&\
-  echo "======" &&\
-  ls -la /iw4x/server/userraw &&\
-  echo "======" &&\
-  ls -la /iw4x/server/players
-
 CMD ["/bin/sh", "/iw4x/init.sh"]
