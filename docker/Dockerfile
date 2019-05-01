@@ -24,7 +24,6 @@ WORKDIR /iw4x
 RUN mkdir -p server
 
 COPY ./init.sh /iw4x/init.sh
-COPY ./config/server.cfg /iw4x/server/players/server.cfg
 
 VOLUME ["/iw4x/server"]
 

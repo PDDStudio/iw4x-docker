@@ -20,6 +20,7 @@ services:
       - type: bind
         source: ./data
         target: /iw4x/server
+      - "./config/server.cfg:/iw4x/server/userraw/server.cfg"
     networks:
       - netstack
     ports:
