@@ -19,6 +19,8 @@ services:
     volumes:
       # Copy the whole dedicated server into iw4x-dedicated/data/ and make sure the files are owned by the values of ${USER_ID} and ${GROUP_ID}
       - "./data/:/iw4x/server/"
+    networks:
+      - netstack
     ports:
       - "28960:28960/udp"
       - "28960:28960"
