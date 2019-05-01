@@ -26,6 +26,10 @@ RUN mkdir -p server
 COPY ./init.sh /iw4x/init.sh
 COPY ./config/server.cfg /iw4x/server/server.cfg
 
+# For testing purposes only
+RUN rm /iw4x/server/userraw/server.cfg
+COPY ./config/server.cfg /iw4x/server/userraw/server.cfg
+
 VOLUME ["/iw4x/server"]
 
 EXPOSE ${IW4X_PORT}/udp
