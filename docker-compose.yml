@@ -17,8 +17,9 @@ services:
     # Will auto-restart your server if it crashes.
     restart: always
     volumes:
-      # Copy the whole dedicated server into iw4x-dedicated/data/ and make sure the files are owned by the values of ${USER_ID} and ${GROUP_ID}
-      - "./data/:/iw4x/server/"
+      - type: bind
+        source: ../data
+        target: /iw4x/server
     networks:
       - netstack
     ports:
