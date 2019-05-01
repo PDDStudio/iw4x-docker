@@ -3,12 +3,12 @@ version: "3.7"
 services:
   server:
     build:
-      context: "./image/"
+      context: "./docker/"
       args:
         # You can change these matching the ids of your current user, except if you are root.
         - USER_ID=1000
         - GROUP_ID=1000
-    image: "iw4x:latest"
+    image: "pddstudio/iw4x-docker:latest"
     # Will auto-restart your server if it crashes.
     restart: always
     environment:
