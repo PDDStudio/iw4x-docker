@@ -77,23 +77,7 @@ $RECYCLE.BIN/
 *.log
 **/*.log
 
-# Exclude server build output
-server/dist
-server/out
-
-# Exclude documentation builds
-docs/build
-
-sinusbot/data/*
-!sinusbot/data/.gitkeep
-sinusbot/scripts/*
-!sinusbot/scripts/.gitkeep
-
-# Exclude abstruse-ci data
-abstruse/data/*
-!abstruse/data/.gitkeep
-
-# Exclude traefik acme config
-stacks/traefik/acme.json
+data
+!data/.gitkeep
 
 # End of https://www.gitignore.io/api/git,macos,windows,gitbook,dotfilessh
