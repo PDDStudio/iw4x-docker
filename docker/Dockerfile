@@ -16,7 +16,7 @@ RUN echo "x86" > /etc/apk/arch &&\
 
 ENV WINEARCH win32
 ENV IW4X_PORT 28960
-ENV IW4X_ARGS -dedicated +set net_port ${IW4X_PORT} +exec server.cfg +set playlistFilename "playlists_default.info" +playlist 0 +map_rotate
+ENV IW4X_ARGS -dedicated +set net_port ${IW4X_PORT} +exec server.cfg +set playlistFilename "playlists_default.info" +playlist 0 +map_rotate +set fs_game "mods/bots"
 
 USER iw4x
 WORKDIR /iw4x
