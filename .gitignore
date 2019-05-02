@@ -77,9 +77,12 @@ $RECYCLE.BIN/
 *.log
 **/*.log
 
+data
 data/client
 !data/client/.gitkeep
 data/mods
 !data/mods/.gitkeep
+data/maps
+!data/maps/.gitkeep
 
 # End of https://www.gitignore.io/api/git,macos,windows,gitbook,dotfilessh
