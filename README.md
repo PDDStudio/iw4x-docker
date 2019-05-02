@@ -1,6 +1,8 @@
 # Call of Duty: Modern Warfare 2 - IW4X Dedicated Server
 
 ![Docker Cloud Automated build](https://img.shields.io/docker/cloud/automated/pddstudio/iw4x-docker.svg?logo=docker)
+![Docker Pulls](https://img.shields.io/docker/pulls/pddstudio/iw4x-docker.svg?logo=linux&logoColor=white)
+![GitHub license](https://img.shields.io/github/license/PDDStudio/iw4x-docker.svg?logo=github)
 
 > A dockerized version of IW4X's serverfiles - to easily host _(multiple)_ dedicated server instances on a Linux VPS.
 
