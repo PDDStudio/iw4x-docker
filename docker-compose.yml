@@ -18,9 +18,10 @@ services:
     restart: always
     volumes:
       - type: bind
-        source: ./data
+        source: ./data/client
         target: /iw4x/server
       - "./config/server.cfg:/iw4x/server/userraw/server.cfg"
+      - "./data/mods:/iw4x/server/mods"
     networks:
       - netstack
     ports:
