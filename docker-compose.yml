@@ -22,6 +22,7 @@ services:
         target: /iw4x/server
       - "./config/server.cfg:/iw4x/server/userraw/server.cfg"
       - "./data/mods:/iw4x/server/mods"
+      - "./data/maps:/iw4x/server/usermaps"
     networks:
       - netstack
     ports:
@@ -32,3 +33,4 @@ services:
       - "traefik.enable=true"
       - "traefik.port=28960"
       - "traefik.frontend.rule=Host:iw4x.pddstudio.io"
+
