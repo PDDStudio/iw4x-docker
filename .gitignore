@@ -81,5 +81,7 @@ data/client
 !data/client/.gitkeep
 data/mods
 !data/mods/.gitkeep
+config
+URL_INFO.md
 
 # End of https://www.gitignore.io/api/git,macos,windows,gitbook,dotfilessh
