@@ -12,6 +12,9 @@ services:
         # You can change these matching the ids of your current user, except if you are root.
         - USER_ID=1000
         - GROUP_ID=1000
+        - ARG_IW4X_PORT=${IW4X_PORT}
+        - ARG_IW4X_ARGS=${IW4X_ARGS}
+        - ARG_IW4X_CONFIG=${IW4X_CONFIG}
     image: "pddstudio/iw4x-docker:latest"
     container_name: iw4x-docker
     # Will auto-restart your server if it crashes.
@@ -20,15 +23,16 @@ services:
       - type: bind
         source: ./data/client
         target: /iw4x/server
-      - "./config/server.cfg:/iw4x/server/userraw/server.cfg"
-      - "./data/mods:/iw4x/server/mods"
+      - "${IW4X_CONFIG}:/iw4x/server/userraw/server.cfg"
+      - "${IW4X_MODS}:/iw4x/server/mods"
+    env_file: .env
     networks:
       - netstack
     ports:
-      - "28960:28960/udp"
-      - "28960:28960"
+      - "${IW4X_PORT}:${IW4X_PORT}/udp"
+      - "${IW4X_PORT}:${IW4X_PORT}"
     labels:
       - "traefik.docker.network=private"
       - "traefik.enable=true"
-      - "traefik.port=28960"
+      - "traefik.port=${IW4X_PORT}"
       - "traefik.frontend.rule=Host:iw4x.pddstudio.io"
