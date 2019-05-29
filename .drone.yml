@@ -11,4 +11,4 @@ steps:
         from_secret: docker_password
       repo: pddstudio/iw4x-docker
       tags: latest
-      dockerfile: docker/Dockerfile
+      dockerfile: docker/Dockerfile.drone
