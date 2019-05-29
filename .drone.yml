@@ -16,4 +16,4 @@ steps:
         - IW4X_PORT=28960
         - IW4X_CONFIG=./config/server.cfg
         - IW4X_MODS=./data/mods
-        - IW4X_ARGS="-dedicated +set net_port ${IW4X_PORT} +exec server.cfg +party_enable 0 +map_rotate +set fs_game \"mods/bots\""
+        - IW4X_ARGS="-dedicated +set net_port 28960 +exec server.cfg +party_enable 0 +map_rotate +set fs_game \"mods/bots\""
