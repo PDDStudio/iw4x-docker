@@ -16,8 +16,13 @@ function setup_gamefiles () {
   # download gamefiles
   wget $GAMEFILES_URL
   # move and extract gamefiles
-  mv  $GAMEFILES_ZIP $GAMEFILES_DIRECTORY
-  unzip $GAMEFILES_DIRECTORY/$GAMEFILES_ZIP
+  unzip -d $GAMEFILES_DIRECTORY $GAMEFILES_ZIP
+  if [ $? -eq 0 ]; then
+    rm $GAMEFILES_ZIP
+  else
+    echo "Unzipping failed"
+    return 1
+  fi
 }
 
 function main () {
