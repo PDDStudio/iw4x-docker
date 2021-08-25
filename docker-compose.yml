@@ -3,17 +3,14 @@ version: "3.7"
 services:
 
   iw4x-server:
+    image: "iw4x-docker:latest"
     build:
       context: "./docker/"
-      args:
-        # You can change these matching the ids of your current user, except if you are root.
-        - USER_ID=1000
-        - GROUP_ID=1000
     container_name: iw4x-docker
     # Will auto-restart your server if it crashes.
     restart: always
     volumes:
-      - "./data:/iw4x"
+      - "./data/server:/iw4x/server"
       - "./config/server.cfg:/iw4x/server/userraw/server.cfg"
     env_file: .env
     ports:
