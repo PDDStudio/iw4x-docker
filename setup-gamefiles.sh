@@ -2,13 +2,11 @@
 
 GAMEFILES_ZIP="iw4x_files.zip"
 GAMEFILES_URL="https://dss0.cc/updater/$GAMEFILES_ZIP"
-GAMEFILES_DIRECTORY=./data/client
-MODS_DIRECTORY=./data/mods
+GAMEFILES_DIRECTORY=./data/server
 
 function create_directories() {
   echo "Creating directories"
   mkdir -p $GAMEFILES_DIRECTORY
-  mkdir -p $MODS_DIRECTORY
 }
 
 function setup_gamefiles () {

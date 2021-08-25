@@ -7,11 +7,6 @@ ENV LANG en_US.utf8
 ARG USER_ID=1000
 ARG GROUP_ID=1000
 
-# Configure args from environment
-ARG ARG_IW4X_PORT
-ARG ARG_IW4X_CONFIG
-ARG ARG_IW4X_ARGS
-
 # This hack is necessary, because it is the only way to install 32-bit wine on 64-bit alpine.
 RUN echo "x86" > /etc/apk/arch &&\
   apk add --no-cache wine &&\
@@ -20,9 +15,9 @@ RUN echo "x86" > /etc/apk/arch &&\
   adduser -h "/iw4x" -G iw4x -D -u ${USER_ID} iw4x
 
 ENV WINEARCH win32
-ENV IW4X_PORT=$ARG_IW4X_PORT
-ENV IW4X_CONFIG=$ARG_IW4X_CONFIG
-ENV IW4X_ARGS=$ARG_IW4X_ARGS
+ENV IW4X_PORT=28960
+ENV IW4X_CONFIG=/iw4x/server/userraw/server.cfg
+ENV IW4X_ARGS="-dedicated +set net_port 28960 +exec server.cfg +party_enable 0"
 
 USER iw4x
 WORKDIR /iw4x
