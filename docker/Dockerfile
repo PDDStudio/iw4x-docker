@@ -31,4 +31,4 @@ VOLUME ["/iw4x/server"]
 EXPOSE ${IW4X_PORT}/udp
 EXPOSE ${IW4X_PORT}
 
-CMD ["/bin/sh", "/iw4x/init.sh"]
+CMD ["/bin/sh", "-e", "init.sh"]
