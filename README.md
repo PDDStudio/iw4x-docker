@@ -18,6 +18,7 @@ Further information can be found [here](https://reactiongaming.us/community/reso
 - [ReactionGaming](https://reactiongaming.us/community/resources/categories/mw2-mods.3/)
 - [Pre-configured Serverfiles](https://steamcommunity.com/linkfilter/?url=https://cdn.discordapp.com/attachments/219514629703860235/309010603484381186/IW4x_prebuilddediconfig.zip)
 - [IW4X Server Documentation](https://xlabs.dev/support_iw4x_server)
+- [IW4X Console Commands](https://xlabs.dev/console_commands)
 
 ## Building
 
