@@ -17,7 +17,7 @@ Further information can be found [here](https://reactiongaming.us/community/reso
 - [IW4x Steam Community](https://steamcommunity.com/groups/IW4X/discussions/0/)
 - [ReactionGaming](https://reactiongaming.us/community/resources/categories/mw2-mods.3/)
 - [Pre-configured Serverfiles](https://steamcommunity.com/linkfilter/?url=https://cdn.discordapp.com/attachments/219514629703860235/309010603484381186/IW4x_prebuilddediconfig.zip)
-- ...
+- [IW4X Server Documentation](https://xlabs.dev/support_iw4x_server)
 
 ## Building
 
@@ -29,3 +29,16 @@ docker-compose build --compress --force-rm --no-cache --pull
 # fire up an instance
 docker-compose up -d
 ```
+
+## Usage
+
+- Download Serverfiles
+- Adjust config file
+- Start compose stack
+- Connect to server
+
+## Serverfiles
+
+This docker image is shipped without any server files.  
+The server files have to be installed separately and need to be mounted via `/iw4x/server` volume.  
+If you use the `docker-compose` setup included in this repository the serverfiles are expected to be located at `./data/server`.
